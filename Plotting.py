@@ -46,5 +46,10 @@ def prime_plot(n, display_numbers=False):
 
 
 m = int(input("What size grid would you like to display? (Must be a perfect square number) Example: 16\n>"))
+display_num = input("Display numbers over each prime? WARNING: Don't use this with large numbers. (Y/N)\n>").lower()
 
-prime_plot(m)
+if display_num == 'y':
+    prime_plot(m, True)
+
+else:
+    prime_plot(m)
