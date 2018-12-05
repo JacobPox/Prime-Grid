@@ -28,7 +28,7 @@ def prime_plot(n, display_numbers=False):
     '''
     N = int(np.sqrt(n))
     if N*N != n:
-        raise ValueError("Need a square grid.")
+        raise ValueError("Need a square grid, but a perfect square was not given.")
 
     primes = np.array(all_prime(n)).astype(int)
     data = np.zeros(n)
@@ -44,4 +44,7 @@ def prime_plot(n, display_numbers=False):
 
     plt.show()
 
-prime_plot(20*20)
+
+m = int(input("What size grid would you like to display? (Must be a perfect square number) Example: 16\n>"))
+
+prime_plot(m)
