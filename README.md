@@ -8,7 +8,7 @@ Clone repository and run the script in its location.
 
 The program will prompt you about the size of grid you want to use (must be a perfect square) Example: 16
 
-Then you'll be asked if you want numbers displayed on the prime number. "Y" for yes, "N" for no. WARNING: If you are creating very large grids, it will slow down from displaying numbers.
+Then you'll be asked if you want numbers displayed on the prime number. "Y" for yes, "N" for no. WARNING: Displaying numbers will slow down the process of creating the graph, if you are creating very large grids, it may take more than a few seconds to generate.
 
 ## Examples
 
