@@ -14,6 +14,16 @@ def all_prime(n):
             sieve[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
     return [2] + [i for i in range(3,n,2) if sieve[i]]
 
+def prime_ratio(n):
+
+  x = all_prime(n)
+
+  y = list(range(n))
+
+  percent = len(x)/len(y) * 100
+
+  return "{}% of the numbers from 0 to {} are prime.".format(percent, n)
+
 def prime_plot(n, display_numbers=False):
     '''
     Takes twos arguments: 
@@ -36,6 +46,7 @@ def prime_plot(n, display_numbers=False):
     data = data.reshape(N,N)
 
     fig, ax = plt.subplots()
+    plt.title(prime_ratio(n))
     ax.imshow(data, cmap="gray_r")
 
     if display_numbers:
@@ -43,6 +54,7 @@ def prime_plot(n, display_numbers=False):
             ax.text(p%N, p//N, p, color="w", ha="center", va="center")
 
     plt.show()
+
 
 
 m = int(input("What size grid would you like to display? (Must be a perfect square number) Example: 16\n>"))
